@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" th:href="@{/css/nav.css}"/>
+	<link rel="stylesheet" th:href="@{/css/table.css}"/>
+	<title>Admin Dashboard</title>
+	<style>
+		
+	</style>
+</head>
+
+<body>
+	<header th:replace="admin_profile::dashboard_header()">
+		 
+	 </header>
+	<table id="profile_table" class="table">
+		<thead>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Designation</td>
+			<th>Country</td>
+			<th>State</td>
+			<th>City</th>
+			<th>   </th>
+		</thead>
+		<tr th:each="user : ${users}">
+			<td>[[${user.id}]]</td>
+			<td>[[${user.name}]]</td>
+			<td>[[${user.email}]]</td>
+			<td>[[${user.role}]]</td>
+			<td>[[${user.country}]]</td>
+			<td>[[${user.state}]]</td>
+			<td>[[${user.city}]]</td>
+			<td><a th:href="@{/admin/dashboard/profile/update(id=${user.id})}">Update</a><a th:href="@{/admin/dashboard/profile/delete(id=${user.id},role=${user.role})}" onclick="userDelete()">Delete</a></td>
+		</tr>
+	</table>
+	<script>
+		function userDelete(){
+			alert("user deleted");
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+
+.table{
+	margin:50px 15%;
+}
+
+th{
+	background-color: rgba(70, 114, 21, 0.639);
+	color: white;
+	border: 2px solid;
+	padding: 10px 40px;
+}
+tr{
+	text-align: center;
+	border: 3px solid black;
+	margin: 10px;
+}

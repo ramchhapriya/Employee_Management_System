@@ -1,0 +1,66 @@
+.container{
+    height: 650px;
+    width: 100%;
+    background-color: rgba(70, 102, 21, 0.639);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registerBox{
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: white -4px -4px 4px 4px;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.inputFormat {
+    font-family:'Times New Roman', Times, serif;
+    line-height: 60px;
+}
+
+.inputFormat input {
+    font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
+    padding: 10px 60px;
+    text-align: center; 
+}
+
+h2{
+    text-align: center;
+    color: rgb(73, 32, 32);
+    font-size: 25px;
+    margin-bottom:0;
+}
+
+.buttons input{
+    margin-left: 3px;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(11, 80, 59);
+}
+
+#stateFormat{
+    text-align: center;
+    width: 140px;
+    padding: 8px 2px;
+}
+
+#cityFormat{
+    text-align: center;
+    width: 140px;
+    padding: 8px 2px;
+    margin-left: 20px;
+}
+
+a{
+	text-decoration-line: none;
+	color: rgb(11, 80, 59);
+	font-weight: bold;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>User's Dashboard</title>
+	<link rel="stylesheet" th:href="@{/css/nav.css}" />
+	<style>
+		#nav {
+			background-color: white;
+			height: 50px;
+			display: inline-block;
+			border-radius: 8px;
+			text-align: center;
+			margin-left: 35%;
+		}
+		
+		h2 {
+			text-align: center;
+			padding-top: 100px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<header th:fragment="user_dashboard_header()">
+		<div class="header">
+			<h1>User Dashboard</h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="http://localhost:8080/user/dashboard">Home</a></li>
+					<li><a href="http://localhost:8080/user/dashboard/profile">Profile</a></li>
+					<li><a th:href="@{/logout}">Logout</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="container">
+		<h2>Welcome, [[${user.name}]]</h2>
+	</div>
+</body>

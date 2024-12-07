@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/login.css}" rel="stylesheet">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="loginBox">
+            <h2>Login to your account</h2><br>
+			<div th:if="${param.error}">
+				<p style="color: red; text-align: center;">Invalid username or password</p>
+			</div>
+            <form th:action="dashboard" method="post">
+            <div class="inputFormat">
+                    <input type="email" name="username" placeholder="Username" required><br>
+                    <input type="password" name="password" placeholder="Password" required><br>
+                    <input type="submit" value="Sign In"><br>
+
+            </div>
+            <input type="checkbox"><span>Remember Me</span>
+            <a href="/account/forgot" id="checkBox">forgot password</a><br><br>
+
+            <span id="registerButton">Don't have an account?</span>
+            <a href="register">Register new account</a>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

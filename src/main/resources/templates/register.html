@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link th:href="@{/css/register.css}" rel="stylesheet">
+	<title>Registration</title>
+</head>
+<body>
+	<div class="container">
+		<div class="registerBox">
+			<h2>Register new account</h2>
+			<p th:text="${email}" style="color: red;"></p>
+			<form action="result" method="post">
+				<div class="inputFormat">
+					<input type="text" name="name" placeholder="Fullname" required><br>
+					<input type="email" name="email" placeholder="Email" required><br>
+					<input type="text" name="country" placeholder="Country"><br>
+					<input id="stateFormat" type="text" name="state" placeholder="State">
+					<input id="cityFormat" type="text" name="city" placeholder="City"><br>
+					<input type="number" name="number" placeholder="Mobile" required><br>
+					<input type="password" name="password" placeholder="Password" required><br>
+					<input type="password" name="userConfirmPassword" placeholder="Confirm password" required><br>
+				</div>
+				<div class="buttons">
+					<input type="submit" value="Register">
+					<input type="reset" value="Cancel">
+					<p>Already have an account?<a href="login"> Login</a></p>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

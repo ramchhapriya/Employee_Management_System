@@ -1,0 +1,52 @@
+
+<html xmlns:th="http://www.thymleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" th:href="@{/css/nav.css}"/>
+	<link rel="stylesheet" th:href="@{/css/table.css}"/>
+	<title>Admin Profile</title>
+</head>
+
+<body>
+	<header th:fragment="dashboard_header()">
+		<div class="header">
+			<h1>Admin Dashboard</h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="http://localhost:8080/admin/dashboard">Home</a></li>
+					<li><a href="http://localhost:8080/admin/dashboard/profile">Profile</a></li>
+					<li><a href="http://localhost:8080/admin/dashboard/viewUsers">View Users</a></li>
+					<li><a href="http://localhost:8080/admin/dashboard/viewAdmin">View Admins</a></li>
+					<li><a th:href="@{/logout}">Logout</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<table id="profile_table" class="table">
+			
+		<thead>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Designation</td>
+			<th>Country</td>
+			<th>State</td>
+			<th>City</th>
+			<th></th>
+		</thead>
+		<tr>
+			<td th:text="${user.id}"></td>
+			<td th:text="${user.name}"></td>
+			<td th:text="${user.email}"></td>
+			<td th:text="${user.role}"></td>
+			<td th:text="${user.country}"></td>
+			<td th:text="${user.state}"></td>
+			<td th:text="${user.city}"></td>
+			<td><a th:href="@{/admin/dashboard/profile/update(id=${user.id})}">Update</a></td>
+		</tr>
+	</table>
+</body>
+
+</html>

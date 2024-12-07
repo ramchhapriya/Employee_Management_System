@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" th:href="@{/css/nav.css}"/>
+	<link rel="stylesheet" th:href="@{/css/table.css}" />
+
+	<title>Admin Dashboard</title>
+	<style>
+		#nav {
+			background-color: white;
+			height: 50px;
+			display: inline-block;
+			border-radius: 8px;
+			text-align: center;
+			margin-left: 35%;
+		}
+		
+		h2 {
+			text-align: center;
+			padding-top: 100px;
+		}
+	</style>
+	
+</head>
+
+<body>
+	<header th:replace="user_dashboard::user_dashboard_header()">
+		 
+	 </header>
+	<table id="profile_table" class="table">
+			
+		<thead>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Designation</td>
+			<th>Country</td>
+			<th>State</td>
+			<th>City</th>
+			<th>    </th>
+		</thead>
+		<tr>
+			<td th:text="${user.id}"></td>
+			<td th:text="${user.name}"></td>
+			<td th:text="${user.email}"></td>
+			<td th:text="${user.role}"></td>
+			<td th:text="${user.country}"></td>
+			<td th:text="${user.state}"></td>
+			<td th:text="${user.city}"></td>
+			<td><a href="/user/dashboard/profile/update">Update</a></td>
+		</tr>
+	</table>
+	<script>
+		 
+	</script>
+</body>
+
+</html>

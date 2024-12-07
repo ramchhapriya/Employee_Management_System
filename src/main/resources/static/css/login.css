@@ -1,0 +1,70 @@
+.container{
+    height:650px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(70, 102, 21, 0.639);
+}
+
+.loginBox {
+    box-shadow: white -4px -4px 4px 4px;
+    width: 400px;
+    height: 400px;
+    background-color: white;    
+    border-radius: 3px;
+    color: rgb(73, 32, 32);
+}
+h2{
+    text-align: center;
+}
+
+.inputFormat{
+    display: flex;
+    flex-direction: column;  
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.inputFormat input {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+input[type="submit"]{
+    background-color: rgb(7, 104, 63);
+    color: white;
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(2, 58, 26);
+}
+
+input[type="checkbox"]{
+    margin-left: 30px;
+}
+
+#checkBox{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    padding-left: 110px;
+
+}
+
+#registerButton{
+    padding-left: 30px;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+a{
+	text-decoration: none;
+	color: rgb(2, 58, 26);
+	font-weight: bold;
+}
+
